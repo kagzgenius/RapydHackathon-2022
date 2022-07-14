@@ -11,7 +11,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 ## Getting Started
