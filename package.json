@@ -1,0 +1,14 @@
+{
+  "name": "rapyd-hackathon-2022",
+  "version": "1.0.0",
+  "description": "Payments solution",
+  "main": "index.js",
+  "repository": "https://github.com/kagzgenius/RapydHackathon-2022.git",
+  "author": "Matthew Obwaya <kagzgenius@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}
