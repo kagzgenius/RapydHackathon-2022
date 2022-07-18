@@ -1,15 +1,13 @@
-import * as React from "react";
-import * as ReactDom from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import { Login } from './pages/Login.js';
 
-function App () {
-    return (  
-        <div>
-            <h1>
-                Make payments in your local currency!
-            </h1>
-        </div>
+export default function App() {
+    return (
+        <>
+        <p>Hello</p>
+        <Login />
+        </>
     );
 }
 
-export default App ;
+
