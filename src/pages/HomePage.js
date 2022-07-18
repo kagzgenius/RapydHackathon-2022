@@ -1,15 +1,13 @@
 import React from 'react';
-import NavList from '../components/NavBar';
+import { NavList } from '../components/NavList';
 
-
-
-export default function HomePage() {
+export function HomePage() {
     return (
-        <>
-            <NavList />
+       <div>
+        <NavList />
             <h1>
-                HomePage
-            </h1>
-        </>
+                Welcome to the home page. 
+            </h1>            
+       </div>
     )
 }

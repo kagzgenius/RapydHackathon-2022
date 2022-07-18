@@ -1,27 +1,30 @@
 import React, { useState } from 'react';
+import { NavList } from '../components/NavList';
 
-
-function Login() {
+export function Login() {
     const [input, setInput] = useState('');
 
     function handleSubmit(e) {
-        setInput(e.target.value);
+        
     }
-    return (
 
+    return (
         <>
-            <h1>Hi</h1>
-            <form onSubmit={handleSubmit}>
+        <NavList />
+            <form onChange={e => {
+                setInput(e.target.value)
+            }}>
                 <label>Bank Account:</label>
-                <input type="text"
+                <input
+                    type="text"
                     value={input}
                     placeholder="Ex: 12345679"
-                    >
+                >
                 </input>
-                <button>Submit</button>
+                <button onSubmit={handleSubmit}>Submit</button>
             </form>
         </>
     );
 }
 
-export default Login;
+

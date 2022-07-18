@@ -1,12 +1,18 @@
 import React from 'react';
-import { Login } from './pages/Login.js';
+import { Route, Routes } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
+import { Login } from './pages/Login';
+import { NavList } from './components/NavList';
 
-export default function App() {
+export function App() {
     return (
-        <>
-        <p>Hello</p>
-        <Login />
-        </>
+            <Routes>
+                <Route path="/" element={<HomePage />}>
+                    <Route index element={<HomePage />} />
+                </Route>
+                    <Route path="/login" element={<Login/>} />
+                    <Route path="/NavBar" element={<NavList/>} />
+            </Routes>
     );
 }
 
