@@ -24,7 +24,7 @@ export function NavList() {
                     isActive ? activeStyle : undefined
                 }
             >
-                Login
+                Checkout
             </NavLink>
         </nav>
     );
