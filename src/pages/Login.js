@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { NavList } from '../components/NavList';
-
-
 
 export function Login() {
     const [input, setInput] = useState('');

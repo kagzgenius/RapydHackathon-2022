@@ -1,5 +1,17 @@
-h1 {
-    color: rgb(232, 87, 20);
-    font-family: cursive;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* h1 {
+    color: rgb(0, 0, 0);
+    font-family: poppins;
     text-align: center ;
+    font-size: large;
+  }  */
+
+
+@layer base {
+  html {
+    font-family: Poppins, system-ui, sans-serif;
   }
+}
