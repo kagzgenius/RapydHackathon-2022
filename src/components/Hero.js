@@ -1,14 +1,20 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import getCheckout from '../../server/getCheckout';
 
 export function Hero() {
+
+    // useEffect(()=>{
+    //     getCheckout()
+    // }, [])
+       
     return(
-    <section class="mb-40">
-        <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
-            <div class="px-6 w-full flex flex-wrap items-center justify-between">
-                <div class="flex items-center">
+    <section className="mb-40">
+        <nav className="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
+            <div className="px-6 w-full flex flex-wrap items-center justify-between">
+                <div className="flex items-center">
                     <button
-                        class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+                        className="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContentY"
@@ -20,7 +26,7 @@ export function Hero() {
                             aria-hidden="true"
                             focusable="false"
                             data-prefix="fas"
-                            class="w-5"
+                            className="w-5"
                             role="img"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"
@@ -31,36 +37,36 @@ export function Hero() {
                             ></path>
                         </svg>
                     </button>
-                    <NavLink class="navbar-brand text-blue-600" to="/">
-                        <svg class="w-5 h-5 ml-2 lg:ml-0 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <NavLink className="navbar-brand text-blue-600" to="/">
+                        <svg className="w-5 h-5 ml-2 lg:ml-0 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                             <path fill="currentColor" d="M485.5 0L576 160H474.9L405.7 0h79.8zm-128 0l69.2 160H149.3L218.5 0h139zm-267 0h79.8l-69.2 160H0L90.5 0zM0 192h100.7l123 251.7c1.5 3.1-2.7 5.9-5 3.3L0 192zm148.2 0h279.6l-137 318.2c-1 2.4-4.5 2.4-5.5 0L148.2 192zm204.1 251.7l123-251.7H576L357.3 446.9c-2.3 2.7-6.5-.1-5-3.2z"></path>
                         </svg>
                         </NavLink>
                 </div>
-                <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
-                    <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
-                        <li class="nav-item">
-                            <NavLink class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" to="/dashboard">Dashboard</NavLink>
+                <div className="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+                    <ul className="navbar-nav mr-auto lg:flex lg:flex-row">
+                        <li className="nav-item">
+                            <NavLink className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" to="/dashboard">Dashboard</NavLink>
                         </li>
-                        <li class="nav-item">
-                            <NavLink class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" to="/team">Team</NavLink>
+                        <li className="nav-item">
+                            <NavLink className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" to="/team">Team</NavLink>
                         </li>
-                        <li class="nav-item mb-2 lg:mb-0">
-                            <NavLink class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" to="/projects">Projects</NavLink>
+                        <li className="nav-item mb-2 lg:mb-0">
+                            <NavLink className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" to="/projects">Projects</NavLink>
                         </li>
                     </ul>
                 </div>
-                <div class="flex items-center lg:ml-auto">
-                    <button type="button" class="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Login</button>
-                    <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Sign up for free</button>
+                <div className="flex items-center lg:ml-auto">
+                    <button type="button" className="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Login</button>
+                    <button type="button" className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Sign up for free</button>
                 </div>
             </div>
         </nav>
 
-        <div class="text-center bg-gray-50 text-gray-800 py-24 px-6">
-            <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">The best offer on the market <br /><span class="text-blue-600">for your business</span></h1>
-            <a class="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Get started</a>
-            <a class="inline-block px-7 py-3 bg-transparent text-blue-600 font-medium text-sm leading-snug uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Learn more</a>
+        <div className="text-left bg-gray-50 text-gray-800 py-24 px-6 pl-12 bg-gradient-to-r from-[#fdc952] to-[#fb6199]">
+            <h1 className="text-4xl md:text-5xl xl:text-5xl font-bold tracking-normal mb-12 md:leading-tight xl:leading-snug">Accept payments in <br /> your <span className="text-white italic font-normal">local</span> currency</h1>
+            <a className="inline-block px-7 py-3 mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Get started</a>
+            <a className="inline-block px-7 py-3 bg-transparent text-blue-600 font-medium text-sm leading-snug uppercase rounded-full hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">Learn more</a>
         </div>
     </section>
     );

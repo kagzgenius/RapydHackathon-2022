@@ -57,13 +57,14 @@ const data = JSON.stringify({
     data,
 };
 
-  function getCheckoutLink() {
+  const getCheckout = function getCheckoutLink() {
       axios(request).then((res) => {
         console.log(res.data.data.redirect_url);
+        return res.data.data.redirect_url
     })
         .catch((e) => {
             console.log(e);
         });
 } 
 
-getCheckoutLink()
+export default getCheckout;
